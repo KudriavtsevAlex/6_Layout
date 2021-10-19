@@ -57,12 +57,13 @@ class _ListGridExampleState extends State<ListGridExample> {
               ),
             ],
           ),
-          // Expanded(
-          //   child: ListView(
-          //     controller: controller,
-          //     children: data.map((item) => item).toList(),
-          //   ),
-          // ),
+          Expanded(
+            child: ListView(
+              controller: controller,
+              children: data.map((item) => item).toList(),
+            ),
+          ),
+
           // Container(
           //   height: 200,
           //   child: ListView(
@@ -85,16 +86,57 @@ class _ListGridExampleState extends State<ListGridExample> {
           //     itemBuilder: (context, index) => data[index],
           //   ),
           // ),
-          Expanded(
-            child: ListWheelScrollView(
-              offAxisFraction: -2,
-              controller: controller,
-              itemExtent: 50,
-              children: [
-                ...data.map((item) => item).toList(),
-              ],
-            ),
-          )
+          // SizedBox(
+          //   height: 100,
+          //   width: 100,
+          //   child: ListWheelScrollView(
+          //     controller: controller,
+          //     itemExtent: 50  ,
+          //     children: [
+          //       ...data.map((item) => item).toList(),
+          //     ],
+          //   ),
+          // ),
+          // Expanded(
+          //   child: ListView.custom(
+          //     childrenDelegate: SliverChildListDelegate(
+          //       data.map((item) => item).toList(),
+          //     ),
+          //     controller: controller,
+          //   ),
+          // ),
+
+          // Expanded(
+          //   child: GridView.count(
+          //     // mainAxisSpacing: 10,
+          //     // crossAxisSpacing: 20,
+          //     crossAxisCount: 3,
+          //     childAspectRatio: 2,
+          //     scrollDirection: Axis.horizontal,
+          //     // physics: ClampingScrollPhysics(),
+          //     children: <Widget>[
+          //       ...data.map((item) => item).toList(),
+          //     ],
+          //   ),
+          // ),
+          // Expanded(
+          //   child: GridView.builder(
+          //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          //       crossAxisCount: 2,
+          //     ),
+          //     itemCount: data.length,
+          //     itemBuilder: (context, index) => data[index],
+          //   ),
+          // ),
+          // Expanded(
+          //   child: GridView.builder(
+          //     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          //       maxCrossAxisExtent: 300,
+          //     ),
+          //     itemCount: data.length,
+          //     itemBuilder: (context, index) => data[index],
+          //   ),
+          // ),
         ],
       ),
     );
